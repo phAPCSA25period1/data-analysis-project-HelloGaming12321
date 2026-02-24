@@ -1,53 +1,53 @@
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
 
-/**
- * Main application for the Data Analysis Mini‑Project.
- *
- * TODO:
- *  - Update the path to your dataset file
- *  - Read the CSV file using Scanner
- *  - Parse each row and extract the correct columns
- *  - Construct Data objects from each row
- *  - Store them in an array
- *  - Write methods to analyze the dataset (min, max, average, filters, etc.)
- *  - Print insights and answer your guiding question
- *  - Add Javadoc comments for any methods you create
- */
 public class App {
+    public static void main(String[] args) throws FileNotFoundException {
+        File file = new File("WorldIndicators2000.csv");
+        Scanner scan = new Scanner(file);
+        int i = 0;
+        scan.nextLine();
+        while(scan.hasNext()){
+            String[] line = scan.nextLine().split(",");
+            if(!line[9].equals("") && !line[12].equals("")){
+            i++;
+            }
+        }
+        scan.close();
 
-    public static void main(String[] args) {
+        Data[] healthToInfant = new Data[i];
 
-        // TODO: Update this with your CSV file path
-        File file = new File("data/your_dataset.csv");
-
-        // TODO: Create an array of Data objects to store data
-
-
-        // TODO: Read file using Scanner
-        // - Skip header if needed
-        // - Loop through rows
-        // - Split each line by commas
-        // - Convert text to numbers when needed
-        // - Create new Data objects
-        // - Add to your array
-
-
-        // TODO: Call your analysis methods
-        // Example:
-        // double maxValue = findMaxValue(dataList);
-        // double average = computeAverageValue(dataList);
-
-
-        // TODO: Print insights
-        // - Number of rows loaded
-        // - Min, max, average, or any other findings
-        // - Final answer to your guiding question
-
-
-        // OPTIONAL TODO:
-        // Add user interaction:
-        // Ask the user what kind of analysis they want to see
+        Scanner scanTwo = new Scanner(file);
+        int j = 0;
+        scanTwo.nextLine();
+        while(scanTwo.hasNext()){
+            String[] line = scanTwo.nextLine().split(",");
+            if(!line[9].equals("") && !line[12].equals("")){
+                healthToInfant[j] = new Data(line[0], Double.parseDouble(line[9]), Double.parseDouble(line[12]));
+                j++;
+            }
+        }
+        scanTwo.close();
+        double totalSpend = 0;
+        for(int k = 0; k < i; k++){
+            totalSpend += healthToInfant[k].getSpend();
+        }
+        double totalInfantMortality = 0;
+        for(int k = 0; k < i; k++){
+            totalInfantMortality += healthToInfant[k].getInfantMortality();
+        }
+        double averageSpend = totalSpend / i;
+        double averageInfantMortality = totalInfantMortality / i;
+        double rTop = 0;
+        double rBottomX = 0;
+        double rBottomY = 0;
+        for(int k = 0; k < i; k++){
+            rTop += ((healthToInfant[k].getSpend() - averageSpend) * (healthToInfant[k].getInfantMortality() - averageInfantMortality));
+            rBottomX += Math.pow((healthToInfant[k].getSpend() - averageSpend), 2);
+            rBottomY += Math.pow((healthToInfant[k].getInfantMortality() - averageInfantMortality), 2);
+        }
+        double r = (rTop / Math.sqrt(rBottomX * rBottomY));
+        System.out.println(r);
     }
-
-
 }
