@@ -83,13 +83,13 @@ public class Data {
             returnString += "Data indicates a weak positive correlation: higher health expenditure as a percentage of GDP is associated with an increased infant mortality rate.";
         }
         else if(r > -.3){
-            returnString += "Data indicates a weak negative correlation: higher health expenditure as a percentage of GDP is associated with an decreased infant mortality rate.";
+            returnString += "Data indicates a weak negative correlation: higher health expenditure as a percentage of GDP is associated with a decreased infant mortality rate.";
         }
         else if(r > -.7){
-            returnString += "Data indicates a moderate negative correlation: higher health expenditure as a percentage of GDP is associated with an decreased infant mortality rate.";
+            returnString += "Data indicates a moderate negative correlation: higher health expenditure as a percentage of GDP is associated with a decreased infant mortality rate.";
         }
         else{
-            returnString += "Data indicates a strong negative correlation: higher health expenditure as a percentage of GDP is associated with an decreased infant mortality rate.";
+            returnString += "Data indicates a strong negative correlation: higher health expenditure as a percentage of GDP is associated with a decreased infant mortality rate.";
         }
         returnString += "\n------------------------------------------------------------------------------------------------------------------------------------------------------";
         return returnString;
