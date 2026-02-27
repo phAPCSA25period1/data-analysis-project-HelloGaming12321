@@ -122,11 +122,10 @@ In `Main.java`, you must:
 
 ### Column → Attribute Map
 
-| Attribute Name | CSV Column Name | Column Index # | Notes |
-|----------------|------------------|----------------|-------|
-|                |                  |                |       |
-|                |                  |                |       |
-|                |                  |                |       |
+| Attribute Name | CSV Column Name     | Column Index # | Notes |
+|----------------|---------------------|----------------|-------|
+|spend           |Health Spend % GDP   |9               |None   |
+|infantMorality  |Infant Mortality Rate|12              |None   |
 
 ---
 
@@ -162,13 +161,10 @@ After analyzing your objects, print:
 - ✔ A clear answer to your guiding question  
 
 **My findings:**  
-____________________________________________________________________  
-____________________________________________________________________  
-____________________________________________________________________  
+I found that the correlation coefficent was negative and very weak, meaning that specifically the percent of GDP that you spend on health might help, but when I did it based on per capita spending, the correlation coefficent was stronger and negativce, meaning I think for medical, total spending is that matters more.
 
 **My answer to the guiding question:**  
-____________________________________________________________________  
-____________________________________________________________________  
+There is a weak negative correlation between the percent of GDP spent on hleahcare vs the infant mortality rate.
 
 ---
 
@@ -215,10 +211,7 @@ Write a short reflection (3–5 sentences):
 - How trustworthy are your insights?
 
 **My reflection:**  
-____________________________________________________________________  
-____________________________________________________________________  
-____________________________________________________________________  
-____________________________________________________________________  
+Some data values were missing, and it is possible that there might have been a trend among that missing data that created a bias. Maybe some undeveloped countries' data were disregarded because they did not have as good of statistic keeping measures. Also, some countries have different defenitions for what an 'alive' baby is, which affects infant morality rate.
 
 ---
 
