@@ -66,12 +66,11 @@ UML_Diagram.png (or UML_Diagram.pdf)
 
 ## 🧩 Step 1 — Choose Your Dataset
 
-**Dataset Name:**  
-**Source / Link:**  
+**Dataset Name: WorldIndicators2000.csv**  
+**Source / Link: https://runestone.academy/ns/books/published/csawesome2/external/_static/datasets/WorldIndicators2000.csv**  
 
 **What this dataset contains (2–3 sentences):**  
-____________________________________________________________________  
-____________________________________________________________________  
+Statistical Information About Specific Countries Across A Few Years
 
 ---
 
@@ -80,8 +79,7 @@ ____________________________________________________________________
 Your guiding question should be something you can answer using your dataset.
 
 **My guiding question:**  
-____________________________________________________________________  
-____________________________________________________________________  
+Does the percent of health expenditure of the gdp correlate to the infant mortality rate?
 
 Examples:
 
@@ -139,15 +137,14 @@ You must write **at least two algorithms** to analyze your dataset.
 ### Required: Choose 2 or more algorithms
 - [ ] Minimum value of attribute  
 - [ ] Maximum value of attribute  
-- [ ] Average of attribute  
+- [X] Average of attribute  
 - [ ] Filter by category  
-- [ ] Count items matching a condition  
+- [X] Count items matching a condition (Done through checking if a data value is empty to see if it should be exlcluded)
 
 **Algorithms I will implement:**
 
-1. __________________________________________  
-2. __________________________________________  
-
+1. Getting the Correlation Coefficent
+2. Finding the total of all the values for my statistics
 Optional extras:  
 - Sorting  
 - Top/bottom N items  
